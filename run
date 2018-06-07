@@ -1,0 +1,4 @@
+sudo rm -rf __pycache__/
+sudo docker-compose up -d db
+sudo docker-compose run --rm flaskapp /bin/bash -c "cd /opt/services/flaskapp/src && python -c  'import database; database.init_db()'"
+sudo docker-compose up -d
